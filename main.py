@@ -1,3 +1,4 @@
+#main.py
 import turtle, colorsys, time, random
 
 mywindow = turtle.Screen()
