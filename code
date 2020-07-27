@@ -664,12 +664,3 @@ time.sleep(3)
 mywindow.bye()
 
 mywindow.mainloop()
-
-
-
-
-
-
-
-
-
