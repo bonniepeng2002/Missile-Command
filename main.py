@@ -494,7 +494,7 @@ def pointreach(t,x,y):
    global b1missile, b2missile,b3missile, startexplodetime
    if x - 10 <= t.xcor() <= x + 10 and y - 10 <= t.ycor() <= y + 10:
        t.shape("circle")
-       startexplodetime = time.clock()
+       startexplodetime = time.time()
        for i in range(0, len(b1missile)):
            if t in b1missile[i]:
                bullet1finish[i]=0
@@ -572,13 +572,13 @@ s3 = 3
 lowestpoint = -130  # change according to structures
 FPS = 60  #60 frames per second
 refreshAt = 1/FPS #and so this is the refresh interval
-startOfInterval = time.clock()
+startOfInterval = time.time()
 mywindow.tracer(0,0)
 #GAME--------------------------------------------------------------------
 
 while life > 0 and sum(cdown)>0:
-  endOfInterval = time.clock()
-  endexplodetime = time.clock()
+  endOfInterval = time.time()
+  endexplodetime = time.time()
   if endOfInterval - startOfInterval >= refreshAt:
       follow()
       cursorboy.onclick(click)
@@ -638,7 +638,7 @@ while life > 0 and sum(cdown)>0:
                    enemyhitcity(enemy[i], enemy[i].xcor(), enemy[i].ycor(), cities[z], cities[z].xcor(), cities[z].ycor()) #check to see if missile hit city
       levelup()
       mywindow.update()  # manually draw the screen
-      startOfInterval = time.clock()
+      startOfInterval = time.time()
 
 cursorboy.hideturtle()
 lifeboy.clear()
